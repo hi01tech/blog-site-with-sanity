@@ -18,6 +18,7 @@ import { sanityFetch } from "@/sanity/lib/fetch";
 import { settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import Link from "next/link";
+import Commentsec from "./commentsec/page";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await sanityFetch({
@@ -68,11 +69,12 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} bg-white text-black`}>
       <body>
-
+       
         <section className="min-h-screen">
-          <AlertBanner  />
-          <main className="mt-11">{children}</main>
+          <AlertBanner />
+          <main>{children}</main>
           <footer className="bg-accent-1 border-accent-2 border-t">
+           <Commentsec/>
             <div className="container mx-auto px-5">
               {footer.length > 0 ? (
                 <PortableText
@@ -87,7 +89,7 @@ export default async function RootLayout({
                   <div className="flex flex-col items-center justify-center lg:w-1/2 lg:flex-row lg:pl-4">
                     <Link
                       href="/"
-                      className="mx-3 mb-6 border rounded-md border-[#e05780] bg-[#ff0a54]/90 py-3 px-12 font-bold text-white transition-colors duration-200 hover:bg-white hover:text-[#00072d] hover:border-[3px] lg:mb-0 lg:px-8"
+                      className="mx-3 mb-6 border rounded-md border-[#e05780] bg-[#e05780]/90 py-3 px-12 font-bold text-white transition-colors duration-200 hover:bg-white hover:text-[#00072d] hover:border-[3px] lg:mb-0 lg:px-8"
                     >
                      Back to Home
                     </Link>
@@ -98,11 +100,13 @@ export default async function RootLayout({
             </div>
           </footer>
         </section>
+       
         <footer className="bg-[#00072d] text-white p-4 mt-8 text-center">
-      <p>&copy; 2024 Tech Blog. All rights reserved.</p>
+      <p>&copy; 2024 Tech's Blog. All rights reserved.</p>
     </footer>
         {isDraftMode && <VisualEditing />}
         <SpeedInsights />
+        
       </body>
     </html>
   );
