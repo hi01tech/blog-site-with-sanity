@@ -13,7 +13,7 @@ export const description = [
         _key: "4a58edd077880",
         _type: "span",
         marks: [],
-        text: "Welcome to Tech's Blogs ",
+        text: "Welcome to Tech Blogs ",
       },
       // {
       //   _key: "4a58edd077881",

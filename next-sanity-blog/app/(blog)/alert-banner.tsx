@@ -24,7 +24,7 @@ export default function AlertBanner() {
       className="top-0 left-0 z-50 w-full border-b bg-[#001c55] text-white/90 backdrop-blur p-4 text-lg  font-semibold text-center   mb-7"
     >
       <div className="py-2 text-center ">
-      Tech's Blogs Site!
+      Tech Blogs Site!
       </div>
     </div>
   );

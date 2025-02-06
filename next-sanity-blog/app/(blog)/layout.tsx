@@ -99,7 +99,7 @@ export default async function RootLayout({
           </footer>
         </section>
         <footer className="bg-[#00072d] text-white p-4 mt-8 text-center">
-      <p>&copy; 2024 Tech's Blog. All rights reserved.</p>
+      <p>&copy; 2024 Tech Blog. All rights reserved.</p>
     </footer>
         {isDraftMode && <VisualEditing />}
         <SpeedInsights />
